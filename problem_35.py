@@ -109,18 +109,18 @@ def is_prime(number):
 
     # Use cached list first
     for prime in PRIMES:
-        if number % prime == 0:
-            return False
-
         if prime * prime > number:
             return True
+
+        if number % prime == 0:
+            return False
 
     # Now, we test 6k-1 and 6k+1
     # 6(k-1) + 1 = 997 => k = 167
     k = 167
 
     # Only test to sqrt(number)
-    while (6*k-1) * (6*k-1) <= number:
+    while (6*k - 1) * (6*k - 1) <= number:
         if number % (6*k - 1) == 0 or number % (6*k + 1) == 0:
             return False
 
