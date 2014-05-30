@@ -140,4 +140,3 @@ circular_primes = get_circular_primes_under(1000000)
 
 print(sorted(circular_primes))
 print(len(circular_primes))
-
